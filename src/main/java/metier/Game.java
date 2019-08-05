@@ -66,7 +66,7 @@ public class Game {
 						status = GameStatus.END.getStatus();
 					}
 					
-					if(lostingPlayer.getCurrentGameScore()==40) {
+					if(lostingPlayer.getCurrentGameScore()==40 ) {
 						status = GameStatus.DEUCE.getStatus();
 					}
 				}
@@ -75,7 +75,7 @@ public class Game {
 					int newScore = winningPlayer.getCurrentGameScore()>=30 ? 40 : winningPlayer.getCurrentGameScore()+15;
 					winningPlayer.setCurrentGameScore(newScore);
 					
-					if(lostingPlayer.getCurrentGameScore() == 40 && lostingPlayer.getCurrentGameScore() == 40 ) {
+					if(lostingPlayer.getCurrentGameScore() == 40 && winningPlayer.getCurrentGameScore() == 40 ) {
 						status = GameStatus.DEUCE.getStatus();
 					}
 				}
